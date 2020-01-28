@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+
+    void limba(int optiune);
+    void language(int option);
+
+
+int main(){
+
+    cout << "------BANCOMAT------" << endl << endl;
+    cout << "Alegeti limba." << endl;
+    cout << "1. Limba romana." << endl;
+    cout << "2. Limba engleza." << endl << endl;
+/*
+Trebuie utilizat "language(1)" pentru engleza.
+Sau limba(1) pentru romana.
+Inca nu am descoperit cum sa citesc asta de la tastatura.
+*/
+language(1);
+return 0;
+}
+
+void limba(int optiune){
+    double ron = 1500; double sum;
+if (optiune == 1)
+    cout << "Ati ales limba romana" << endl << endl;
+    cout << "1. Verificare sold." << endl;
+    cout << "2. Extragere numerar." << endl;
+    cout << "3. Iesire." << endl;
+    int varianta;
+    cin >> varianta;
+    if (varianta == 1){
+        cout << "Mai dispuneti in cont de " << ron << " lei." << endl;
+        cout << "La revedere!";
+        return;
+    }
+    if (varianta == 2){
+        cout << "Introduceti suma pe care doriti sa o extrageti sau apasati 0 pentru a parasi." << endl;
+        cin >> sum;
+        if (sum == 0) return;
+        else if(sum < 1500){ cout << "Ati extras " << sum << " roni." << endl;
+        cout << "Mai dispuneti de " << ron - sum << "roni." << endl;;
+        cout << "La revedere!" << endl;}
+        else cout << "Nu aveti bani suficienti." << endl;
+        return;
+    }
+    if (varianta == 3){
+        cout << "La revedere!" << endl;
+        return;
+    }
+}
+void language(int option){
+double dollars = 1500, sum2;
+int value;
+if(option == 1){
+    cout << "You chose English language." << endl;
+    cout << "1. Balance query." << endl;
+    cout << "2. Withdraw." << endl;
+    cout << "3. Exit." << endl;
+}cin >> value;
+    if(value == 1){
+        cout << "You have 1500 dollars." << endl;
+        cout << "Goodbye!";
+            return;}
+            if(value == 2){
+                cout << "Please enter the amount of moneys you want to withdraw or enter 0 to leave." << endl;
+                cin >> sum2;
+                if(sum2 == 0){
+                        cout << "Goodbye!";
+        return;
+    }
+    if(sum2 <= 1500){
+        cout << "You withdraw " << sum2 << " dollars." << endl;
+        cout << "In your account you left " << dollars - sum2 << " dollars." << endl;
+        cout << "Goodbye!" << endl;
+        return;
+    }
+    else if(sum2 > 1500){
+        cout << "You don't have this amount of moneys!" << endl;
+        cout << "Goodbye!" << endl;
+        return;}}
+
+        if(value == 3){
+    cout << "Goodbye!" << endl;
+    return;}
+}
+
